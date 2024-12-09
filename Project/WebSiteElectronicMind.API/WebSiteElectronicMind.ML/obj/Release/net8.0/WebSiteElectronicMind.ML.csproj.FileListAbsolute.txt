@@ -1,0 +1,16 @@
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.ML\bin\Release\net8.0\WebSiteElectronicMind.ML.deps.json
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.ML\bin\Release\net8.0\WebSiteElectronicMind.ML.dll
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.ML\bin\Release\net8.0\WebSiteElectronicMind.ML.pdb
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.ML\bin\Release\net8.0\WebSiteElectronicMind.Core.dll
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.ML\bin\Release\net8.0\WebSiteElectronicMind.Core.pdb
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.ML\obj\Release\net8.0\WebSiteElectronicMind.ML.csproj.AssemblyReference.cache
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.ML\obj\Release\net8.0\WebSiteElectronicMind.ML.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.ML\obj\Release\net8.0\WebSiteElectronicMind.ML.AssemblyInfoInputs.cache
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.ML\obj\Release\net8.0\WebSiteElectronicMind.ML.AssemblyInfo.cs
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.ML\obj\Release\net8.0\WebSiteElectronicMind.ML.csproj.CoreCompileInputs.cache
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.ML\obj\Release\net8.0\WebSiteElectronicMind.ML.sourcelink.json
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.ML\obj\Release\net8.0\WebSiteE.CC63F0E5.Up2Date
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.ML\obj\Release\net8.0\WebSiteElectronicMind.ML.dll
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.ML\obj\Release\net8.0\refint\WebSiteElectronicMind.ML.dll
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.ML\obj\Release\net8.0\WebSiteElectronicMind.ML.pdb
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.ML\obj\Release\net8.0\ref\WebSiteElectronicMind.ML.dll

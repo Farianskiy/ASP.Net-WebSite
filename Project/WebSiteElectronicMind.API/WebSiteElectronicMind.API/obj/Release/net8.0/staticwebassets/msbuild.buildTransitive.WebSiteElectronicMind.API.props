@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\WebSiteElectronicMind.API.props" />
+</Project>

@@ -1,0 +1,138 @@
+﻿/* Заголовок PredictionML */
+.hero-section h2 {
+    color: #ffcc00; /* Желтый цвет */
+}
+
+/* Карточка для загруженного файла */
+.file-card {
+    background-color: rgba(255, 204, 0, 0.1); /* Легкий желтоватый фон */
+    border: 1px solid #ffcc00; /* Желтая рамка */
+    border-radius: 5px; /* Закругленные углы */
+    padding: 10px; /* Внутренние отступы */
+    margin-top: 20px; /* Отступ сверху */
+    transition: opacity 0.3s ease; /* Плавный переход для изменения прозрачности */
+    display: inline-block; /* Изменение свойства display */
+    width: fit-content; /* Автоматическая подстройка ширины */
+    margin-left: 0; /* Выровнять по левому краю */
+}
+
+    /* Внутреннее содержимое карточки */
+    .file-card .card-body {
+        display: flex; /* Гибкое выравнивание */
+        justify-content: space-between; /* Распределение элементов по краям */
+        align-items: center; /* Выравнивание элементов по центру по вертикали */
+    }
+
+/* Имя файла */
+#fileName {
+    font-size: 16px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    color: #ffffff; /* Белый цвет текста */
+    margin-right: 10px; /* Отступ справа */
+}
+
+/* Стили для кнопки удаления */
+.btn-close {
+    background-color: transparent; /* Прозрачный фон */
+    border: none; /* Без границы */
+    font-size: 1.5rem; /* Размер шрифта */
+    color: #ffcc00; /* Желтый цвет */
+    cursor: pointer; /* Указатель курсора */
+}
+
+    /* Стили для кнопки удаления при наведении */
+    .btn-close:hover {
+        color: #e6b800; /* Изменение цвета при наведении */
+    }
+
+/* Выравнивание меток по левому краю */
+.form-group label {
+    text-align: left; /* Выравнивание текста по левому краю */
+    display: block; /* Блочный элемент */
+    color: #ffffff; /* Белый цвет для контраста */
+}
+
+/* Стиль для кнопки отправки */
+.btn-donate {
+    background-color: transparent; /* Прозрачный фон */
+    border: 2px solid #ffcc00; /* Желтая рамка */
+    color: #ffcc00; /* Желтый текст */
+    padding: 10px 20px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Указатель курсора */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход для фона и текста */
+}
+
+    /* Стиль для кнопки отправки при наведении */
+    .btn-donate:hover {
+        background-color: #ffcc00; /* Желтый фон при наведении */
+        color: #000000; /* Черный текст при наведении */
+    }
+
+/* Стили для текста */
+.text-white {
+    color: #ffffff; /* Белый цвет текста */
+}
+
+/* Стили для секции с загруженным файлом */
+#uploadedFile {
+    margin-top: 15px; /* Отступ сверху */
+    display: flex; /* Гибкое выравнивание */
+    align-items: center; /* Выравнивание элементов по центру по вертикали */
+}
+
+/* Новые стили для разделения на две колонки */
+.hero-section, .history-section {
+    width: 45%; /* Ширина секции */
+    float: left; /* Обтекание слева */
+    margin: 2.5%; /* Внешние отступы */
+}
+
+/* Секция истории загрузок */
+.history-section {
+    background-color: #f9f9f9; /* Светло-серый фон */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 8px; /* Закругленные углы */
+}
+
+/* Элементы истории и нового файла */
+.history-item, .new-file-item {
+    display: flex; /* Гибкое выравнивание */
+    justify-content: space-between; /* Распределение элементов по краям */
+    padding: 10px; /* Внутренние отступы */
+    border-bottom: 1px solid #ddd; /* Нижняя граница */
+}
+
+/* Имя файла */
+.file-name {
+    font-weight: bold; /* Жирный шрифт */
+}
+
+/* Дата загрузки */
+.upload-date {
+    color: #888; /* Серый цвет текста */
+}
+
+.hero-section {
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.submit-button {
+    padding: 10px 15px;
+    background-color: #ffcc00;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #ffcc00;
+    width: 200px; /* Увеличьте значение для большей длины */
+}
+
+
+

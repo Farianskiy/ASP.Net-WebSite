@@ -1,0 +1,38 @@
+﻿<style >
+/* Оверлей, который перекрывает весь экран */
+#loadingOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Высокий уровень слоя */
+    pointer-events: auto; /* Активирует блокировку кликов */
+}
+
+/* Анимация спиннера */
+.spinner {
+    border: 8px solid #f3f3f3; /* Светлый цвет границы */
+    border-top: 8px solid #3498db; /* Синий цвет для анимации */
+    border-radius: 50%; /* Круг */
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+/* Анимация вращения */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+</style >

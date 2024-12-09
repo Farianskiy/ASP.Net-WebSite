@@ -1,0 +1,168 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Files\Excel\Input\2715043f-0305-4a35-b88c-40428599ddc3.xlsx" />
+    <None Remove="Files\Excel\Output\Run.xlsx" />
+    <None Remove="Files\Font\arialmt.ttf" />
+    <None Remove="Files\Font\dinpro.otf" />
+    <None Remove="Files\Models\modelNominalTok.zip" />
+    <None Remove="Files\Models\modelPKC.zip" />
+    <None Remove="Files\Models\modelPolus.zip" />
+    <None Remove="Files\Models\modelProizvoditel.zip" />
+    <None Remove="Files\Models\modelRascepitel.zip" />
+    <None Remove="Files\Models\modelRevNerev.zip" />
+    <None Remove="Files\Models\modelSeria.zip" />
+    <None Remove="Files\Models\modelSposobYstanovki.zip" />
+    <None Remove="Files\Models\modelTokYtehki.zip" />
+    <None Remove="Files\Models\modelTypeOborudovanie.zip" />
+    <None Remove="Files\Models\modelXaracteristika.zip" />
+    <None Remove="Files\Models\modelXaracteristikaDIF.zip" />
+    <None Remove="Files\RenderingPDF\Logo.png" />
+    <None Remove="Files\Schemes\Input\AutomatP1.png" />
+    <None Remove="Files\Schemes\Input\AutomatP3.png" />
+    <None Remove="Files\Schemes\Input\DifAutomatP1.png" />
+    <None Remove="Files\Schemes\Input\DifAutomatP3.png" />
+    <None Remove="Files\Schemes\Input\VHP1.png" />
+    <None Remove="Files\Schemes\Input\VHP3.png" />
+    <None Remove="Files\Schemes\Input\YZoP1.png" />
+    <None Remove="Files\Schemes\Input\YZoP3.png" />
+    <None Remove="Files\Schemes\OL\AutomatP1.png" />
+    <None Remove="Files\Schemes\OL\AutomatP3.png" />
+    <None Remove="Files\Schemes\OL\DifAutomatP1.png" />
+    <None Remove="Files\Schemes\OL\DifAutomatP3.png" />
+    <None Remove="Files\Schemes\OL\YZoP1.png" />
+    <None Remove="Files\Schemes\OL\YZoP3.png" />
+    <None Remove="Files\Schemes\Shina\Shina230B.png" />
+    <None Remove="Files\Schemes\Shina\Shina400B.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Files\Excel\Input\2715043f-0305-4a35-b88c-40428599ddc3.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Excel\Output\Run.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Font\arialmt.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Font\dinpro.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Models\modelNominalTok.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Models\modelPKC.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Models\modelPolus.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Models\modelProizvoditel.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Models\modelRascepitel.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Models\modelRevNerev.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Models\modelSeria.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Models\modelSposobYstanovki.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Models\modelTokYtehki.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Files\Models\modelTypeOborudovanie.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Models\modelXaracteristika.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Models\modelXaracteristikaDIF.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\RenderingPDF\Logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Schemes\Input\AutomatP1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Schemes\Input\AutomatP3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Schemes\Input\DifAutomatP1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Schemes\Input\DifAutomatP3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Schemes\Input\VHP1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Schemes\Input\VHP3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Schemes\Input\YZoP1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Schemes\Input\YZoP3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Schemes\OL\AutomatP1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Schemes\OL\AutomatP3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Schemes\OL\DifAutomatP1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Schemes\OL\DifAutomatP3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Schemes\OL\YZoP1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Schemes\OL\YZoP3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Schemes\Shina\Shina230B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Schemes\Shina\Shina400B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebSiteElectronicMind.Application\WebSiteElectronicMind.Application.csproj" />
+    <ProjectReference Include="..\WebSiteElectronicMind.Core\WebSiteElectronicMind.Core.csproj" />
+    <ProjectReference Include="..\WebSiteElectronicMind.ML\WebSiteElectronicMind.ML.csproj" />
+    <ProjectReference Include="..\WebSiteElectronicMind.MVC\WebSiteElectronicMind.MVC.csproj" />
+    <ProjectReference Include="..\WebSiteElectronicMind.Rendering\WebSiteElectronicMind.Rendering.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Files\Metadata\" />
+    <Folder Include="Files\PDF\" />
+    <Folder Include="Files\RenderingPDF\History\" />
+  </ItemGroup>
+
+</Project>

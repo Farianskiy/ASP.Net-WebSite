@@ -1,0 +1,67 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Electro AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/HomeStyle.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигационная панель -->
+    <nav class="navbar navbar-expand-lg  ">
+        <div class="container">
+            <a  href="/">
+                <svg width="160" height="30" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect width="100%" height="100%" fill="none" />
+                    <text x="50%" y="50%" font-family="Arial" font-size="24" fill="url(#grad1)" text-anchor="middle" alignment-baseline="middle" style="font-weight:bold; text-transform:uppercase; font-style:italic; letter-spacing:1px; ">
+                        Electro AI
+                    </text>
+                </svg>
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="margin-left: 15px;">
+                        <a class="nav-link" href="/ML/PredictionML">Автоматы</a>
+                    </li>
+                    <li class="nav-item" style="margin-left: 15px;">
+                        <a class="nav-link" href="/Rendering/GeneratorPDF">PDF</a>
+                    </li>
+                    <!--<li class="nav-item" style="margin-left: 15px;">
+                        <a class="nav-link" href="#">База знаний</a>
+                    </li>
+                    <li class="nav-item" style="margin-left: 15px;">
+                        <a class="nav-link" href="#">Статистика</a>
+                    </li>-->
+                </ul>
+
+                <!-- <button class="btn btn-outline-light me-2">Вход</button> -->
+                <!-- <button class="btn btn-outline-light me-2">Регистрация</button> -->
+                <!-- <button class="btn btn-donate">Внести пожертвования</button> -->
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Основной контент страниц -->
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+{
+  "192": [
+    {
+      "Name": "ВА 4729 1п 6А B 4,5кА КЭАЗ",
+      "NameOfScheme": "ВА 4729 In=6А хар.B Icu=4500",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "1",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 1,
+      "NumberBuild": "192"
+    },
+    {
+      "Name": "ВА 4729 1п 6А B 4,5кА КЭАЗ",
+      "NameOfScheme": "ВА 4729 In=6А хар.B Icu=4500",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "2",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "192"
+    },
+    {
+      "Name": "ВА 4729 1п 6А B 4,5кА КЭАЗ",
+      "NameOfScheme": "ВА 4729 In=6А хар.B Icu=4500",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "3",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "192"
+    },
+    {
+      "Name": "ВА 4729 1п 6А B 4,5кА КЭАЗ",
+      "NameOfScheme": "ВА 4729 In=6А хар.B Icu=4500",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "4",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "192"
+    },
+    {
+      "Name": "ВА 4729 1п 6А B 4,5кА КЭАЗ",
+      "NameOfScheme": "ВА 4729 In=6А хар.B Icu=4500",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "5",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "192"
+    },
+    {
+      "Name": "ВА 4729 1п 6А B 4,5кА КЭАЗ",
+      "NameOfScheme": "ВА 4729 In=6А хар.B Icu=4500",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "6",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "192"
+    },
+    {
+      "Name": "ВА 4729 1п 6А B 4,5кА КЭАЗ",
+      "NameOfScheme": "ВА 4729 In=6А хар.B Icu=4500",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "7",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "192"
+    },
+    {
+      "Name": "ВА 4729 3п 10А B 4,5кА КЭАЗ",
+      "NameOfScheme": "ВА 4729 In=10А хар.B Icu=4500",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "8",
+      "Phase": "",
+      "Polus": 3,
+      "Level": 2,
+      "NumberBuild": "192"
+    }
+  ],
+  "1922": [
+    {
+      "Name": "ВА 4760М 1п 16А C 6кА IEK",
+      "NameOfScheme": "ВА 4760М In=16А хар.C Icu=6000",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 1,
+      "NumberBuild": "1922"
+    },
+    {
+      "Name": "ВА 4760М 1п 16А C 6кА IEK",
+      "NameOfScheme": "ВА 4760М In=16А хар.C Icu=6000",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "1922"
+    },
+    {
+      "Name": "ВА 4760М 1п 16А C 6кА IEK",
+      "NameOfScheme": "ВА 4760М In=16А хар.C Icu=6000",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "1922"
+    },
+    {
+      "Name": "ВА 4760М 1п 16А C 6кА IEK",
+      "NameOfScheme": "ВА 4760М In=16А хар.C Icu=6000",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "1922"
+    },
+    {
+      "Name": "ВА 4760М 1п 16А C 6кА IEK",
+      "NameOfScheme": "ВА 4760М In=16А хар.C Icu=6000",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "1922"
+    },
+    {
+      "Name": "ВА 4760М 1п 16А C 6кА IEK",
+      "NameOfScheme": "ВА 4760М In=16А хар.C Icu=6000",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "1922"
+    },
+    {
+      "Name": "АВДТ 32 2п 16А C 30мА 6кА A IEK",
+      "NameOfScheme": "АВДТ 32 In=16А хар.C Icu=6000",
+      "Type": "Диф автомат",
+      "NumberingLetter": "QFD",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 2,
+      "Level": 2,
+      "NumberBuild": "1922"
+    },
+    {
+      "Name": "АВДТ 32 2п 16А C 30мА 6кА A IEK",
+      "NameOfScheme": "АВДТ 32 In=16А хар.C Icu=6000",
+      "Type": "Диф автомат",
+      "NumberingLetter": "QFD",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 2,
+      "Level": 2,
+      "NumberBuild": "1922"
+    },
+    {
+      "Name": "АВДТ 32 2п 16А C 30мА 6кА A IEK",
+      "NameOfScheme": "АВДТ 32 In=16А хар.C Icu=6000",
+      "Type": "Диф автомат",
+      "NumberingLetter": "QFD",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 2,
+      "Level": 2,
+      "NumberBuild": "1922"
+    }
+  ],
+  "1902": [
+    {
+      "Name": "ВА 4729 3п 10А B 4,5кА КЭАЗ",
+      "NameOfScheme": "ВА 4729 In=10А хар.B Icu=4500",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 3,
+      "Level": 1,
+      "NumberBuild": "1902"
+    },
+    {
+      "Name": "ВА 4729 1п 6А B 4,5кА КЭАЗ",
+      "NameOfScheme": "ВА 4729 In=6А хар.B Icu=4500",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "1902"
+    },
+    {
+      "Name": "ВА 4729 3п 10А B 4,5кА КЭАЗ",
+      "NameOfScheme": "ВА 4729 In=10А хар.B Icu=4500",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 3,
+      "Level": 2,
+      "NumberBuild": "1902"
+    },
+    {
+      "Name": "ВА 4729 1п 6А B 4,5кА КЭАЗ",
+      "NameOfScheme": "ВА 4729 In=6А хар.B Icu=4500",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "1902"
+    },
+    {
+      "Name": "ВА 4729 1п 6А B 4,5кА КЭАЗ",
+      "NameOfScheme": "ВА 4729 In=6А хар.B Icu=4500",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "1902"
+    },
+    {
+      "Name": "ВА 4729 1п 6А B 4,5кА КЭАЗ",
+      "NameOfScheme": "ВА 4729 In=6А хар.B Icu=4500",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "1902"
+    },
+    {
+      "Name": "ВА 4729 1п 6А B 4,5кА КЭАЗ",
+      "NameOfScheme": "ВА 4729 In=6А хар.B Icu=4500",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "1902"
+    },
+    {
+      "Name": "ВА 4729 3п 10А B 4,5кА КЭАЗ",
+      "NameOfScheme": "ВА 4729 In=10А хар.B Icu=4500",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 3,
+      "Level": 2,
+      "NumberBuild": "1902"
+    }
+  ],
+  "1923": [
+    {
+      "Name": "ВА 4760М 1п 16А C 6кА IEK",
+      "NameOfScheme": "ВА 4760М In=16А хар.C Icu=6000",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 1,
+      "NumberBuild": "1923"
+    },
+    {
+      "Name": "ВА 4760М 1п 16А C 6кА IEK",
+      "NameOfScheme": "ВА 4760М In=16А хар.C Icu=6000",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "1923"
+    },
+    {
+      "Name": "ВА 4760М 1п 16А C 6кА IEK",
+      "NameOfScheme": "ВА 4760М In=16А хар.C Icu=6000",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "1923"
+    },
+    {
+      "Name": "ВА 4760М 1п 16А C 6кА IEK",
+      "NameOfScheme": "ВА 4760М In=16А хар.C Icu=6000",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "1923"
+    },
+    {
+      "Name": "ВА 4760М 1п 16А C 6кА IEK",
+      "NameOfScheme": "ВА 4760М In=16А хар.C Icu=6000",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "1923"
+    },
+    {
+      "Name": "ВА 4760М 1п 16А C 6кА IEK",
+      "NameOfScheme": "ВА 4760М In=16А хар.C Icu=6000",
+      "Type": "Автомат",
+      "NumberingLetter": "QF",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 1,
+      "Level": 2,
+      "NumberBuild": "1923"
+    },
+    {
+      "Name": "АВДТ 32 2п 16А C 30мА 6кА A IEK",
+      "NameOfScheme": "АВДТ 32 In=16А хар.C Icu=6000",
+      "Type": "Диф автомат",
+      "NumberingLetter": "QFD",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 3,
+      "Level": 2,
+      "NumberBuild": "1923"
+    },
+    {
+      "Name": "АВДТ 32 2п 16А C 30мА 6кА A IEK",
+      "NameOfScheme": "АВДТ 32 In=16А хар.C Icu=6000",
+      "Type": "Диф автомат",
+      "NumberingLetter": "QFD",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 3,
+      "Level": 2,
+      "NumberBuild": "1923"
+    },
+    {
+      "Name": "АВДТ 32 2п 16А C 30мА 6кА A IEK",
+      "NameOfScheme": "АВДТ 32 In=16А хар.C Icu=6000",
+      "Type": "Диф автомат",
+      "NumberingLetter": "QFD",
+      "NumberingDigit": "",
+      "Phase": "",
+      "Polus": 3,
+      "Level": 2,
+      "NumberBuild": "1923"
+    }
+  ]
+}

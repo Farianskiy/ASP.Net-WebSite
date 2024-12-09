@@ -1,0 +1,821 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "GeneratorPDF";
+}
+
+
+<link href="~/css/ProgresBar.css" rel="stylesheet" />
+
+<div id="loadingOverlay" style="display: none;">
+    <div class="spinner"></div>
+</div>
+
+
+
+<div class="hero-section">
+    <h2 style="color: #ffcc00;">Создание PDF файла</h2>
+    <form id="generatePdfForm">
+
+        <div class="subsection-container">
+            <!-- Навигация по подразделам -->
+            <div class="subsection-buttons" style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <button type="button" class="btn btn-primary" onclick="showSection('section1')">Щит и Электрические характеристики</button>
+                    <button type="button" class="btn btn-primary" onclick="showSection('section2')">Таблица для PDF</button>
+                </div>
+                <button type="button" class="btn btn-danger" onclick="clearTable()">Очистить</button>
+            </div>
+
+            
+
+            <!-- Поле ввода номера сборки -->
+            <div class="build-number-container">
+                <label for="buildNumber" class="build-number-label"></label>
+                <input type="text" id="buildNumber" class="form-control build-number-input" name="NumberBuild" placeholder="Введите номер сборки">
+            </div>
+
+            
+        </div>
+
+        <!-- Первая секция -->
+        <div id="section1" class="form-section">
+            <h3 style="color: #ffcc00;">Щит и Электрические характеристики</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Параметр</th>
+                        <th>Значение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Информация о щите -->
+                    <tr>
+                        <td><label for="Shield_NameShield">Наименование щита сокращенное</label></td>
+                        <td><input type="text" id="Shield_NameShield" name="Shield.NameShield" class="form-control" value="Щит 1" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Shield_FullNameShield">Наименование щита полное</label></td>
+                        <td><input type="text" id="Shield_FullNameShield" name="Shield.FullNameShield" class="form-control" value="Полное наименование щита 1" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Shield_TypeShield">Тип щита</label></td>
+                        <td>
+                            <select id="Shield_TypeShield" name="Shield.TypeShield" class="form-control">
+                                <option value="D1">D1</option>
+                                <option value="D2">D2</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Электрические характеристики -->
+                    <tr>
+                        <td><label for="Electrical_NominalVoltage">Номинальное напряжение</label></td>
+                        <td>
+                            <select id="Electrical_NominalVoltage" name="Electrical.NominalVoltage" class="form-control">
+                                <option value="230">230</option>
+                                <option value="400">400</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="Electrical_NominalShield">Номинальный ток щита</label></td>
+                        <td>
+                            <input type="number" id="Electrical_NominalShield" name="Electrical.NominalShield" class="form-control" min="1" max="630"
+                                   onblur="validateRange(this, 1, 630, 'Недопустимый номинальный ток')" value="32" />
+                            <span class="error-message" id="error-Electrical_NominalShield" style="color: red; display: none;">Недопустимый номинальный ток</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="Electrical_TypeGrounding">Тип системы заземления</label></td>
+                        <td>
+                            <select id="Electrical_TypeGrounding" name="Electrical.TypeGrounding" class="form-control">
+                                <option value="TN-S">TN-S</option>
+                                <option value="TN-C-S">TN-C-S</option>
+                                <option value="TN-C">TN-C</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Информация о кабелях -->
+                    <tr>
+                        <td><label for="Cable_SupplyCable">Ввод питающего кабеля</label></td>
+                        <td>
+                            <select id="Cable_SupplyCable" name="Cable.SupplyCable" class="form-control">
+                                <option value="Сверху">Сверху</option>
+                                <option value="Снизу">Снизу</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="Cable_CableOL">Ввод кабелей ОЛ</label></td>
+                        <td>
+                            <select id="Cable_CableOL" name="Cable.CableOL" class="form-control">
+                                <option value="Сверху">Сверху</option>
+                                <option value="Снизу">Снизу</option>
+                            </select>
+                        </td>
+                    </tr>
+
+
+                    <!-- Степень защиты оболочки -->
+                    <tr>
+                        <td><label for="DegreeProtection">Степень защиты оболочки</label></td>
+                        <td>
+                            <select id="DegreeProtection" name="DegreeProtection" class="form-control">
+                                <option value="IP31">IP31</option>
+                                <option value="IP54">IP54</option>
+                                <option value="IP65">IP65</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Сальники (оментумы) -->
+                    <tr>
+                        <td><label for="Omentum_TypeOmentum">Тип сальников для ввода питающего кабеля</label></td>
+                        <td>
+                            <select id="Omentum_TypeOmentum" name="Omentum.TypeOmentum" class="form-control">
+                                <option value="HTC">HTC</option>
+                                <option value="PG">PG</option>
+                                <option value="MG">MG</option>
+                                <option value="Сальник ЩРН">Сальник ЩРН</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Omentum_QuantityOmentum">Количество сальников для ввода питающего кабеля</label></td>
+                        <td>
+                            <input type="number" id="Omentum_QuantityOmentum" name="Omentum.QuantityOmentum" class="form-control" min="1" max="100"
+                                   onblur="validateRange(this, 1, 100, 'Недопустимое количество')" value="23" />
+                            <span class="error-message" id="error-Omentum_QuantityOmentum" style="color: red; display: none;">Недопустимое количество</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Omentum_TypeOmentumOL">Тип сальников для ввода кабелей ОЛ</label></td>
+                        <td>
+                            <select id="Omentum_TypeOmentumOL" name="Omentum.TypeOmentumOL" class="form-control">
+                                <option value="HTC">HTC</option>
+                                <option value="PG">PG</option>
+                                <option value="MG">MG</option>
+                                <option value="Сальник ЩРН">Сальник ЩРН</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="Omentum_QuantityOmentumOL">Количество сальников для ввода кабелей ОЛ</label></td>
+                        <td>
+                            <input type="number" id="Omentum_QuantityOmentumOL" name="Omentum.QuantityOmentumOL" class="form-control" min="1" max="100"
+                                   onblur="validateRange(this, 1, 100, 'Недопустимое количество')" value="23" />
+                            <span class="error-message" id="error-Omentum_QuantityOmentumOL" style="color: red; display: none;">Недопустимое количество</span>
+                        </td>
+                    </tr>
+
+                    <!-- Питающий кабель -->
+                    <tr>
+                        <td><label for="PowerCable">Питающий кабель</label></td>
+                        <td>
+                            <input type="text" id="PowerCable" name="PowerCable" class="form-control" value="DSWFSRS" />
+                        </td>
+                    </tr>
+
+                    
+
+                    <!-- Комментарий -->
+                    <tr>
+                        <td><label for="Comment">Комментарий</label></td>
+                        <td><textarea id="Comment" name="Comment" class="form-control"></textarea></td> 
+                    </tr>
+
+                    <!-- Информация по сборке -->
+                    <tr>
+                        <td><label for="Build_FullNameEngineer">Имя инженера</label></td>
+                        <td><input type="text" id="Build_FullNameEngineer" name="Build.FullNameEngineer" class="form-control" value="Ферин А.Е." /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Build_NumberOrderCustomer">Номер заказа заказчика</label></td>
+                        <td><input type="text" id="Build_NumberOrderCustomer" name="Build.NumberOrderCustomer" class="form-control" value="123" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Build_NumberBuild">Номер сборки</label></td>
+                        <td><input type="text" id="Build_NumberBuild" name="Build.NumberBuild" class="form-control" value="213" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+            function validateRange(input, min, max, errorMessage) {
+                const errorSpan = document.getElementById('error-' + input.id);
+                if (input.value < min || input.value > max) {
+                    errorSpan.textContent = errorMessage;
+                    errorSpan.style.display = 'inline';
+                } else {
+                    errorSpan.style.display = 'none';
+                }
+            }
+        </script>
+
+        <!-- Вторая секция -->
+        <div id="section2" class="form-section" style="display: none;">
+            <h3 style="color: #ffcc00;">Таблица для PDF</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="width: 300px;">Название</th>
+                        <th style="width: 250px;">Название схемы</th>
+                        <th style="width: 150px;">Тип</th>
+                        <th style="width: 50px;">Нумерация (буква)</th>
+                        <th style="width: 50px;">Нумерация (цифра)</th>
+                        <th style="width: 80px;">Фаза</th>
+                        <th style="width: 80px;">Полюс</th> <!-- Новый столбец -->
+                        <th style="width: 50px;">Уровень</th>
+                        <th style="width: 120px;">Действия</th>
+                    </tr>
+                </thead>
+                <tbody id="renderingTableBody">
+                    <tr>
+                        <td>
+                            <input type="text"
+                                   name="RenderingTable[0].Name"
+                                   class="form-control"
+                                   onchange="fetchSchemeDetails(this)"
+                                   placeholder="Введите название" />
+                        </td>
+                        <td><input type="text" name="RenderingTable[0].NameOfScheme" class="form-control" /></td>
+                        <td>
+                            <select name="RenderingTable[0].Type" class="form-control">
+                                <option value="" selected disabled></option>
+                                <option value="Автомат">Автомат</option>
+                                <option value="Диф автомат">Диф автомат</option>
+                                <option value="УЗО">УЗО</option>
+                                <option value="ВН">ВН</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="RenderingTable[0].NumberingLetter" class="form-control" /></td>
+                        <td><input type="text" name="RenderingTable[0].NumberingDigit" class="form-control" /></td>
+                        <td>
+                            <select name="RenderingTable[0].Phase" class="form-control">
+                                <option value="" selected disabled></option>
+                                <option value="А">А</option>
+                                <option value="В">В</option>
+                                <option value="С">С</option>
+                                <option value="З">З</option>
+                            </select>
+                        </td>
+                        <td><input type="number" name="RenderingTable[0].Polus" class="form-control" /></td> <!-- Новый ввод -->
+                        <td>
+                            <select name="RenderingTable[0].Level" class="form-control">
+                                <option value="" selected disabled></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </td>
+                        <td><button type="button" class="btn btn-danger" onclick="removeRow(this)">Удалить</button></td>
+                    </tr>
+                </tbody>
+
+            </table>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <button type="button" class="btn btn-primary" onclick="addRow()">Добавить строку</button>
+                
+                <div>
+                    <input type="file" id="uploadExcel" accept=".xls, .xlsx" style="display: none;" />
+                    <button type="button" class="btn btn-primary" onclick="document.getElementById('uploadExcel').click()">Загрузить Excel</button>
+                </div>
+
+                <button id="generatePdfButton" class="btn btn-primary">Сгенерировать PDF</button>
+            </div>
+
+            <!-- Секция для истории сборок -->
+            <div id="historySection" class="form-section">
+                <h3 style="color: #ffcc00;">История сборок</h3>
+                <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                    <input type="text" id="searchBuildNumber" class="form-control" placeholder="Введите номер сборки" />
+                    <button type="button" class="btn btn-primary" onclick="searchBuild()">Найти</button>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Номер сборки</th>
+                            <th>Дата создания</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyTableBody">
+                        <!-- История будет загружаться динамически -->
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+        <!-- Скрипт для загрузки истории сборок -->
+
+        <script>
+            document.addEventListener('DOMContentLoaded', async () => {
+                const loadingOverlay = document.getElementById('loadingOverlay');
+                const showLoading = () => { loadingOverlay.style.display = 'flex'; };
+                const hideLoading = () => { loadingOverlay.style.display = 'none'; };
+
+                try {
+                    await loadHistory();
+                } catch (error) {
+                    console.error('Ошибка при загрузке истории:', error);
+                }
+
+                const generatePdfButton = document.getElementById('generatePdfButton');
+                const generatePdfForm = document.getElementById('generatePdfForm');
+
+                generatePdfButton.addEventListener('click', async (event) => {
+                    event.preventDefault();
+
+                    showLoading(); // Показать прогрессбар
+                    try {
+                        const formData = new FormData(generatePdfForm);
+
+                        const response = await fetch('/Rendering/GeneratePdf', {
+                            method: 'POST',
+                            body: formData,
+                        });
+
+                        if (!response.ok) {
+                            throw new Error('Ошибка при генерации PDF.');
+                        }
+
+                        // Получаем файл в виде blob
+                        const blob = await response.blob();
+
+                        // Создаем временный URL для файла и инициируем скачивание
+                        const url = window.URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = 'output.pdf'; // Имя скачиваемого файла
+                        document.body.appendChild(a);
+                        a.click(); // Запуск скачивания
+                        document.body.removeChild(a); // Удаляем временный элемент ссылки
+                        window.URL.revokeObjectURL(url); // Освобождаем ресурсы
+
+                        await loadHistory(); // Обновляем историю
+                    } catch (error) {
+                        console.error('Произошла ошибка:', error);
+                    } finally {
+                        hideLoading(); // Скрыть прогрессбар
+                    }
+                });
+
+            });
+
+
+
+
+
+
+            // Загрузка истории сборок
+            async function loadHistory() {
+                try {
+                    const response = await fetch('http://localhost:7014/RenderingControllers/api/history'); // Укажите правильный путь к вашему API
+                    const history = await response.json();
+
+                    const tbody = document.getElementById('historyTableBody');
+                    tbody.innerHTML = ''; // Очистка таблицы перед загрузкой
+
+                    history.forEach(build => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${build.numberBuild}</td>
+                            <td>${new Date(build.dateCreated).toLocaleString()}</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" onclick="loadBuild('${build.numberBuild}')">Загрузить</button>
+                            </td>
+                        `;
+                        tbody.appendChild(row);
+                    });
+                } catch (error) {
+                    console.error('Ошибка загрузки истории:', error);
+                }
+            }
+
+            // Поиск сборки по номеру
+            async function searchBuild() {
+                const searchInput = document.getElementById('searchBuildNumber').value;
+
+                try {
+                    const response = await fetch(`http://localhost:7014/RenderingControllers/api/history/${searchInput}`); // Укажите правильный путь к вашему API
+                    if (response.ok) {
+                        const build = await response.json();
+                        populateFormFields(build);
+                    } else {
+                        alert('Сборка не найдена!');
+                    }
+                } catch (error) {
+                    console.error('Ошибка поиска сборки:', error);
+                }
+            }
+
+            // Загрузка данных сборки в форму
+            function loadBuild(numberBuild) {
+            fetch(`http://localhost:7014/RenderingControllers/api/history/${numberBuild}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Данные, полученные из API:", data);
+                    populateFormFields(data);
+                })
+                .catch(error => console.error('Ошибка загрузки сборки:', error));
+}
+
+
+            // Заполнение формы данными сборки
+            function populateFormFields(build) {
+                console.log("Пополняем форму с данными сборки:", build);
+                // Установить номер сборки
+                const buildNumberInput = document.getElementById('buildNumber');
+                buildNumberInput.value = build.numberBuild || ''; // Если номер сборки отсутствует, оставляем поле пустым
+
+                const tbody = document.getElementById('renderingTableBody');
+                tbody.innerHTML = ''; // Очистить таблицу перед заполнением
+
+                build.tables.forEach((table, index) => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td><input type="text" name="RenderingTable[${index}].Name" class="form-control" value="${table.name}" /></td>
+                        <td><input type="text" name="RenderingTable[${index}].NameOfScheme" class="form-control" value="${table.nameOfScheme}" /></td>
+                        <td>
+                            <select name="RenderingTable[${index}].Type" class="form-control">
+                                <option value="Автомат" ${table.type === 'Автомат' ? 'selected' : ''}>Автомат</option>
+                                <option value="Диф автомат" ${table.type === 'Диф автомат' ? 'selected' : ''}>Диф автомат</option>
+                                <option value="УЗО" ${table.type === 'УЗО' ? 'selected' : ''}>УЗО</option>
+                                <option value="ВН" ${table.type === 'ВН' ? 'selected' : ''}>ВН</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="RenderingTable[${index}].NumberingLetter" class="form-control" value="${table.numberingLetter}" /></td>
+                        <td><input type="text" name="RenderingTable[${index}].NumberingDigit" class="form-control" value="${table.numberingDigit}" /></td>
+                        <td>
+                            <select name="RenderingTable[${index}].Phase" class="form-control">
+                                <option value="" ${table.phase === null ? 'selected' : ''}></option> <!-- Пустой вариант -->
+                                <option value="А" ${table.phase === 'А' ? 'selected' : ''}>А</option>
+                                <option value="В" ${table.phase === 'В' ? 'selected' : ''}>В</option>
+                                <option value="С" ${table.phase === 'С' ? 'selected' : ''}>С</option>
+                                <option value="З" ${table.phase === 'З' ? 'selected' : ''}>З</option>
+                            </select>
+                        </td>
+                        <td><input type="number" name="RenderingTable[${index}].Polus" class="form-control" value="${table.polus}" /></td>
+                        <td>
+                            <select name="RenderingTable[${index}].Level" class="form-control">
+                                <option value="1" ${table.level === 1 ? 'selected' : ''}>1</option>
+                                <option value="2" ${table.level === 2 ? 'selected' : ''}>2</option>
+                            </select>
+                        </td>
+                        <td><button type="button" class="btn btn-danger" onclick="removeRow(this)">Удалить</button></td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            }
+
+        </script>
+
+        <!-- Скрипт для автоматического заполнения полей по наименованию -->
+        
+
+        <script>
+            // Функция получения данных схемы
+            async function fetchSchemeDetails(input) {
+                const row = input.closest("tr");
+                const name = input.value;
+
+                if (!name) return;
+
+                try {
+                    const response = await fetch(`http://localhost:7014/RenderingControllers/api/GetSchemeDetails?name=${encodeURIComponent(name)}`);
+                    if (!response.ok) {
+                        const error = await response.json();
+                        console.error('Ошибка:', error.Message || 'Неизвестная ошибка');
+                        return;
+                    }
+
+                    const data = await response.json();
+                    console.log('Полученные данные:', data);
+
+                    if (data) {
+                        const typeSelect = row.querySelector('select[name$="Type"]');
+                        const numberingLetterInput = row.querySelector('input[name$="NumberingLetter"]');
+                        const nameOfSchemeInput = row.querySelector('input[name$="NameOfScheme"]');
+                        const polusInput = row.querySelector('input[name$="Polus"]'); // Новый элемент
+
+                        // Заполняем поля
+                        nameOfSchemeInput.value = data.nameOfScheme || '';
+                        numberingLetterInput.value = data.numberingLetter || '';
+                        polusInput.value = data.polus || ''; // Устанавливаем значение полюса
+
+                        // Вывод значения типа из данных сервера для отладки
+                        console.log('Тип из данных сервера:', data.type);
+
+                        // Сопоставление типов
+                        const typeMapping = {
+                            "Модульный автомат": "Автомат",
+                            "Дифференциальный автомат": "Диф автомат",
+                            "УЗО": "УЗО",
+                            "Выключатель нагрузки": "ВН"
+                        };
+
+                        const mappedType = typeMapping[data.type] || ""; // Преобразуем тип из данных сервера
+
+                        // Вывод преобразованного типа для отладки
+                        console.log('Преобразованный тип:', mappedType);
+
+                        // Устанавливаем значение в select
+                        const option = Array.from(typeSelect.options).find(opt => opt.textContent === mappedType);
+                        if (option) {
+                            typeSelect.value = option.value; // Установить выбранное значение
+                        } else {
+                            console.error('Не найдено соответствующее значение для типа:', mappedType);
+                        }
+
+                    }
+                } catch (error) {
+                    console.error('Ошибка при получении данных схемы:', error);
+                }
+            }
+
+        </script>
+
+
+        <script>
+            document.getElementById('uploadExcel').addEventListener('change', async function () {
+                const file = this.files[0];
+                if (!file) return;
+
+                const formData = new FormData();
+                formData.append('file', file);
+
+                try {
+                    const response = await fetch('/UploadExcel', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    if (!response.ok) {
+                        console.error('Ошибка при загрузке файла:', response.status, response.statusText);
+                        alert('Ошибка при загрузке файла.');
+                        return;
+                    }
+
+                    const responseData = await response.json();
+                    console.log('Ответ сервера:', responseData);
+
+                    const { names: rawNames, buildNumber } = responseData;
+
+                    // Заполняем поле номера сборки
+                    const buildNumberInput = document.getElementById('buildNumber');
+                    if (buildNumberInput && buildNumber) {
+                        buildNumberInput.value = buildNumber;
+                    }
+
+                    // Преобразуем массив names, если он существует
+                    let names = [];
+                    if (Array.isArray(rawNames)) {
+                        names = rawNames.map(item => {
+                            try {
+                                const parsed = JSON.parse(item); // Парсим JSON-строку
+                                return parsed.name || ''; // Извлекаем значение поля "name"
+                            } catch (e) {
+                                console.error('Ошибка парсинга элемента массива names:', item, e);
+                                return ''; // Если ошибка, оставляем пустое значение
+                            }
+                        });
+                    }
+
+                    if (!Array.isArray(names) || names.length === 0) {
+                        console.error('Поле names отсутствует или пустое.');
+                        alert('Не удалось извлечь данные из файла.');
+                        return;
+                    }
+
+
+                    // 1. Очищаем таблицу перед загрузкой нового файла
+                    const tableBody = document.getElementById('renderingTableBody');
+                    tableBody.innerHTML = ''; // Полностью очищаем содержимое
+                    rowIndex = 0; // Сбрасываем индекс строк
+
+                    // 2. Асинхронно добавляем строки и заполняем их данными
+                    for (let i = 0; i < names.length; i++) {
+                        const name = names[i];
+                        const newRow = `
+                            <tr>
+                                <td>
+                                    <input
+                                        type="text"
+                                        name="RenderingTable[${i}].Name"
+                                        class="form-control name-input"
+                                        placeholder="Введите название"
+                                        value="${name || ''}"
+                                        onchange="fetchSchemeDetails(this)"
+                                    />
+                                </td>
+                                <td><input type="text" name="RenderingTable[${i}].NameOfScheme" class="form-control" value="" /></td>
+                                <td>
+                                    <select name="RenderingTable[${i}].Type" class="form-control">
+                                        <option value="" selected disabled></option>
+                                        <option value="Автомат">Автомат</option>
+                                        <option value="Диф автомат">Диф автомат</option>
+                                        <option value="УЗО">УЗО</option>
+                                        <option value="ВН">ВН</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" name="RenderingTable[${i}].NumberingLetter" class="form-control" value="" /></td>
+                                <td><input type="text" name="RenderingTable[${i}].NumberingDigit" class="form-control" value="" /></td>
+                                <td>
+                                    <select name="RenderingTable[${i}].Phase" class="form-control">
+                                        <option value="" selected disabled></option>
+                                        <option value="А">А</option>
+                                        <option value="В">В</option>
+                                        <option value="С">С</option>
+                                        <option value="З">З</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" name="RenderingTable[${i}].Polus" class="form-control" value="" /></td>
+                                <td>
+                                    <select name="RenderingTable[${i}].Level" class="form-control">
+                                        <option value="" disabled></option>
+                                        <option value="1" ${i === 0 ? "selected" : ""}>1</option>
+                                        <option value="2" ${i !== 0 ? "selected" : ""}>2</option>
+                                    </select>
+                                </td>
+                                <td><button type="button" class="btn btn-danger" onclick="removeRow(this)">Удалить</button></td>
+                            </tr>
+                        `;
+                        tableBody.insertAdjacentHTML('beforeend', newRow);
+
+                        // Получаем последний добавленный input
+                        const inputField = tableBody.lastElementChild.querySelector('input[name$="Name"]');
+                        if (inputField) {
+                            // Ждем завершения fetchSchemeDetails для каждого input
+                            await fetchSchemeDetails(inputField);
+                        }
+                    }
+                    // После завершения добавления строк
+                    rowIndex = document.querySelectorAll("#renderingTableBody tr").length;
+                    recalculateRowIndices();
+
+                    alert('Данные успешно загружены и обновлены!');
+                } catch (error) {
+                    console.error('Ошибка:', error);
+                    alert('Ошибка при обработке данных.');
+                }
+            });
+
+
+            function removeRow(button) {
+                const row = button.closest("tr");
+                row.remove();
+
+                // Перерасчет индексов после удаления строки
+                const rows = document.querySelectorAll("#renderingTableBody tr");
+                rows.forEach((row, index) => {
+                    row.querySelectorAll("input, select").forEach(element => {
+                        const nameAttr = element.getAttribute("name");
+                        if (nameAttr) {
+                            // Обновляем индекс в атрибуте name
+                            const newName = nameAttr.replace(/\[\d+\]/, `[${index}]`);
+                            element.setAttribute("name", newName);
+                        }
+                    });
+                });
+
+                // Обновляем rowIndex
+                rowIndex = rows.length;
+            }
+        </script>
+
+
+        <!-- Скрипты для переключения разделов -->
+        <script>
+            function showSection(sectionId) {
+                document.getElementById("section1").style.display = sectionId === 'section1' ? 'block' : 'none';
+                document.getElementById("section2").style.display = sectionId === 'section2' ? 'block' : 'none';
+            }
+
+            let rowIndex = 1;
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const firstRowLevelSelect = document.querySelector("#renderingTableBody tr:first-child select[name$='Level']");
+                if (firstRowLevelSelect) {
+                    firstRowLevelSelect.value = "1"; // Устанавливаем значение для первой строки
+                }
+            });
+
+            function addRow() {
+                const tbody = document.getElementById("renderingTableBody");
+                const newRow = document.createElement("tr");
+
+                newRow.innerHTML = `
+                    <td>
+                        <input
+                            type="text"
+                            name="RenderingTable[${rowIndex}].Name"
+                            class="form-control"
+                            onchange="fetchSchemeDetails(this)"
+                            placeholder="Введите название"
+                        />
+                    </td>
+                    <td><input type="text" name="RenderingTable[${rowIndex}].NameOfScheme" class="form-control" /></td>
+                    <td>
+                        <select name="RenderingTable[${rowIndex}].Type" class="form-control">
+                            <option value="" selected disabled></option>
+                            <option value="Автомат">Автомат</option>
+                            <option value="Диф автомат">Диф автомат</option>
+                            <option value="УЗО">УЗО</option>
+                            <option value="ВН">ВН</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="RenderingTable[${rowIndex}].NumberingLetter" class="form-control" /></td>
+                    <td><input type="text" name="RenderingTable[${rowIndex}].NumberingDigit" class="form-control" /></td>
+                    <td>
+                        <select name="RenderingTable[${rowIndex}].Phase" class="form-control">
+                            <option value="" selected disabled></option>
+                            <option value="А">А</option>
+                            <option value="В">В</option>
+                            <option value="С">С</option>
+                            <option value="З">З</option>
+                        </select>
+                    </td>
+                    <td><input type="number" name="RenderingTable[${rowIndex}].Polus" class="form-control" /></td>
+                    <td>
+                        <select name="RenderingTable[${rowIndex}].Level" class="form-control">
+                            <option value="" disabled></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </td>
+                    <td><button type="button" class="btn btn-danger" onclick="removeRow(this)">Удалить</button></td>
+                `;
+
+                tbody.appendChild(newRow);
+
+                // Устанавливаем значение Level для новых строк
+                const newRowLevelSelect = newRow.querySelector("select[name$='Level']");
+                if (newRowLevelSelect) {
+                    const tableBody = document.getElementById('renderingTableBody');
+                    const existingRows = tableBody.querySelectorAll('tr');
+
+                    // Если это первая строка, устанавливаем Level в "1", иначе в "2"
+                    if (existingRows.length === 1) {  // После добавления строки, это будет первая
+                        newRowLevelSelect.value = "1";
+                    } else {
+                        newRowLevelSelect.value = "2";
+                    }
+                }
+
+                // Пересчёт индексов
+                recalculateRowIndices();
+                rowIndex++; // Увеличиваем индекс после добавления строки
+            }
+
+            function removeRow(button) {
+                const row = button.closest("tr");
+                row.remove();
+
+                // Пересчёт индексов
+                recalculateRowIndices();
+            }
+
+            function recalculateRowIndices() {
+                const rows = document.querySelectorAll("#renderingTableBody tr");
+                rows.forEach((row, index) => {
+                    row.querySelectorAll("input, select").forEach(element => {
+                        const nameAttr = element.getAttribute("name");
+                        if (nameAttr) {
+                            const newName = nameAttr.replace(/\[\d+\]/, `[${index}]`);
+                            element.setAttribute("name", newName);
+                        }
+                    });
+                });
+
+                // Пересчитываем индексы, чтобы первая строка всегда имела индекс 0
+                rowIndex = rows.length;
+            }
+
+            function clearTable() {
+                const tableBody = document.getElementById('renderingTableBody');
+                tableBody.innerHTML = ''; // Удаляет все строки в теле таблицы
+                rowIndex = 0; // Сброс индекса
+
+                const inputField = document.getElementById('buildNumber');
+                if (inputField) {
+                    inputField.value = ''; // Очистка содержимого поля
+                }
+            }
+
+
+
+        </script>
+
+        
+
+
+        
+    </form>
+</div>

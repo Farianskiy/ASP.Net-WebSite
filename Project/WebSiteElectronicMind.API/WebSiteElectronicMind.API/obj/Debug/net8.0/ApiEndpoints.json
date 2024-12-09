@@ -1,0 +1,175 @@
+[
+  {
+    "ContainingType": "WebSiteElectronicMind.API.Controllers.PositionController",
+    "Method": "CreatePosition",
+    "RelativePath": "Position",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TitelFileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileExcel",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebSiteElectronicMind.API.Controllers.PositionController",
+    "Method": "GetFile",
+    "RelativePath": "Position/download-files",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filePath",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebSiteElectronicMind.API.Controllers.PositionController",
+    "Method": "GetLatestFiles",
+    "RelativePath": "Position/latest-files",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebSiteElectronicMind.Core.Models.FileMetadata, WebSiteElectronicMind.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebSiteElectronicMind.MVC.Controllers.RenderingController",
+    "Method": "GeneratePdf",
+    "RelativePath": "Rendering/GeneratePdf",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebSiteElectronicMind.API.Controllers.RenderingControllers",
+    "Method": "GetNames",
+    "RelativePath": "RenderingControllers/api/GetNames",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebSiteElectronicMind.API.Controllers.RenderingControllers",
+    "Method": "GetSchemeDetails",
+    "RelativePath": "RenderingControllers/api/GetSchemeDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebSiteElectronicMind.API.Controllers.RenderingControllers",
+    "Method": "GetHistory",
+    "RelativePath": "RenderingControllers/api/history",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebSiteElectronicMind.API.Controllers.RenderingControllers",
+    "Method": "GetBuild",
+    "RelativePath": "RenderingControllers/api/history/{numberBuild}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numberBuild",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebSiteElectronicMind.API.Controllers.RenderingControllers",
+    "Method": "DownloadPdf",
+    "RelativePath": "RenderingControllers/download",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebSiteElectronicMind.API.Controllers.RenderingControllers",
+    "Method": "GeneratePdf1",
+    "RelativePath": "RenderingControllers/generator-Pdf",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WebSiteElectronicMind.API.Contracts.RenderingRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebSiteElectronicMind.MVC.Controllers.RenderingController",
+    "Method": "UploadExcel",
+    "RelativePath": "UploadExcel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

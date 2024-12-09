@@ -1,0 +1,37 @@
+﻿body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(20, 17, 16, 0.9);
+    padding-top: 70px; /* Учитываем высоту навигационной панели */
+}
+
+.navbar {
+    backdrop-filter: blur(5px);
+    background-color: rgba(20, 17, 16, 0.9); /* Темно-серый фон с небольшой прозрачностью */
+    border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    transition: background-color .2s ease;
+}
+
+    .navbar.scrolled {
+        background-color: rgba(20, 17, 16, 1); /* Панель становится полностью непрозрачной при прокрутке */
+    }
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+    .nav-link:hover,
+    .nav-link:focus,
+    .nav-link:active {
+        color: #ffcc00; /* Желтый цвет */
+    }
+

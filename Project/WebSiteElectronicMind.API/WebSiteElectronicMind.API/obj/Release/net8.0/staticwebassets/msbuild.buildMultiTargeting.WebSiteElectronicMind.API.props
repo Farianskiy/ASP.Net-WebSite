@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\WebSiteElectronicMind.API.props" />
+</Project>

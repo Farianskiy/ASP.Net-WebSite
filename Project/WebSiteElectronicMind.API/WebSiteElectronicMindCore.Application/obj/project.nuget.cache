@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Qy23/fCPCMk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Farianskiy\\Desktop\\WebASPNet\\Project\\WebSiteElectronicMind.API\\WebSiteElectronicMindCore.Application\\WebSiteElectronicMindCore.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Farianskiy\\.nuget\\packages\\csharpfunctionalextensions\\3.0.0\\csharpfunctionalextensions.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

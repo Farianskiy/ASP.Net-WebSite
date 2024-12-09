@@ -1,0 +1,13 @@
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.Core\bin\Release\net8.0\WebSiteElectronicMind.Core.deps.json
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.Core\bin\Release\net8.0\WebSiteElectronicMind.Core.dll
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.Core\bin\Release\net8.0\WebSiteElectronicMind.Core.pdb
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.Core\obj\Release\net8.0\WebSiteElectronicMind.Core.csproj.AssemblyReference.cache
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.Core\obj\Release\net8.0\WebSiteElectronicMind.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.Core\obj\Release\net8.0\WebSiteElectronicMind.Core.AssemblyInfoInputs.cache
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.Core\obj\Release\net8.0\WebSiteElectronicMind.Core.AssemblyInfo.cs
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.Core\obj\Release\net8.0\WebSiteElectronicMind.Core.csproj.CoreCompileInputs.cache
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.Core\obj\Release\net8.0\WebSiteElectronicMind.Core.sourcelink.json
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.Core\obj\Release\net8.0\WebSiteElectronicMind.Core.dll
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.Core\obj\Release\net8.0\refint\WebSiteElectronicMind.Core.dll
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.Core\obj\Release\net8.0\WebSiteElectronicMind.Core.pdb
+C:\Users\Farianskiy\Desktop\WebASPNet\Project\WebSiteElectronicMind.API\WebSiteElectronicMind.Core\obj\Release\net8.0\ref\WebSiteElectronicMind.Core.dll

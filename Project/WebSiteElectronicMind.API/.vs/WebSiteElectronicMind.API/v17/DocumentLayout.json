@@ -1,0 +1,135 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Farianskiy\\Desktop\\WebASPNet\\Project\\WebSiteElectronicMind.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A04B23-1E93-40C3-9B4D-DA071AE53F84}|WebSiteElectronicMind.MVC\\WebSiteElectronicMind.MVC.csproj|c:\\users\\farianskiy\\desktop\\webaspnet\\project\\websiteelectronicmind.api\\websiteelectronicmind.mvc\\views\\rendering\\generatorpdf.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7A04B23-1E93-40C3-9B4D-DA071AE53F84}|WebSiteElectronicMind.MVC\\WebSiteElectronicMind.MVC.csproj|solutionrelative:websiteelectronicmind.mvc\\views\\rendering\\generatorpdf.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A04B23-1E93-40C3-9B4D-DA071AE53F84}|WebSiteElectronicMind.MVC\\WebSiteElectronicMind.MVC.csproj|c:\\users\\farianskiy\\desktop\\webaspnet\\project\\websiteelectronicmind.api\\websiteelectronicmind.mvc\\controllers\\renderingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A04B23-1E93-40C3-9B4D-DA071AE53F84}|WebSiteElectronicMind.MVC\\WebSiteElectronicMind.MVC.csproj|solutionrelative:websiteelectronicmind.mvc\\controllers\\renderingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2A0834-6338-4E96-B0DF-2F0F529FBEC4}|WebSiteElectronicMind.API\\WebSiteElectronicMind.API.csproj|c:\\users\\farianskiy\\desktop\\webaspnet\\project\\websiteelectronicmind.api\\websiteelectronicmind.api\\controllers\\renderingcontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2A0834-6338-4E96-B0DF-2F0F529FBEC4}|WebSiteElectronicMind.API\\WebSiteElectronicMind.API.csproj|solutionrelative:websiteelectronicmind.api\\controllers\\renderingcontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFC131E-E2E6-4AA1-826D-FF90227612D7}|WebSiteElectronicMind.Rendering\\WebSiteElectronicMind.Rendering.csproj|c:\\users\\farianskiy\\desktop\\webaspnet\\project\\websiteelectronicmind.api\\websiteelectronicmind.rendering\\repositories\\pdfgeneratorrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFC131E-E2E6-4AA1-826D-FF90227612D7}|WebSiteElectronicMind.Rendering\\WebSiteElectronicMind.Rendering.csproj|solutionrelative:websiteelectronicmind.rendering\\repositories\\pdfgeneratorrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFC131E-E2E6-4AA1-826D-FF90227612D7}|WebSiteElectronicMind.Rendering\\WebSiteElectronicMind.Rendering.csproj|c:\\users\\farianskiy\\desktop\\webaspnet\\project\\websiteelectronicmind.api\\websiteelectronicmind.rendering\\repositories\\pdfgeneratormoresevenrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFC131E-E2E6-4AA1-826D-FF90227612D7}|WebSiteElectronicMind.Rendering\\WebSiteElectronicMind.Rendering.csproj|solutionrelative:websiteelectronicmind.rendering\\repositories\\pdfgeneratormoresevenrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RenderingControllers.cs",
+              "DocumentMoniker": "C:\\Users\\Farianskiy\\Desktop\\WebASPNet\\Project\\WebSiteElectronicMind.API\\WebSiteElectronicMind.API\\Controllers\\RenderingControllers.cs",
+              "RelativeDocumentMoniker": "WebSiteElectronicMind.API\\Controllers\\RenderingControllers.cs",
+              "ToolTip": "C:\\Users\\Farianskiy\\Desktop\\WebASPNet\\Project\\WebSiteElectronicMind.API\\WebSiteElectronicMind.API\\Controllers\\RenderingControllers.cs",
+              "RelativeToolTip": "WebSiteElectronicMind.API\\Controllers\\RenderingControllers.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAkwDoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T10:14:23.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GeneratorPDF.cshtml",
+              "DocumentMoniker": "C:\\Users\\Farianskiy\\Desktop\\WebASPNet\\Project\\WebSiteElectronicMind.API\\WebSiteElectronicMind.MVC\\Views\\Rendering\\GeneratorPDF.cshtml",
+              "RelativeDocumentMoniker": "WebSiteElectronicMind.MVC\\Views\\Rendering\\GeneratorPDF.cshtml",
+              "ToolTip": "C:\\Users\\Farianskiy\\Desktop\\WebASPNet\\Project\\WebSiteElectronicMind.API\\WebSiteElectronicMind.MVC\\Views\\Rendering\\GeneratorPDF.cshtml",
+              "RelativeToolTip": "WebSiteElectronicMind.MVC\\Views\\Rendering\\GeneratorPDF.cshtml",
+              "ViewState": "AgIAADYBAAAAAAAAAAAqwHABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-02T09:04:57.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RenderingController.cs",
+              "DocumentMoniker": "C:\\Users\\Farianskiy\\Desktop\\WebASPNet\\Project\\WebSiteElectronicMind.API\\WebSiteElectronicMind.MVC\\Controllers\\RenderingController.cs",
+              "RelativeDocumentMoniker": "WebSiteElectronicMind.MVC\\Controllers\\RenderingController.cs",
+              "ToolTip": "C:\\Users\\Farianskiy\\Desktop\\WebASPNet\\Project\\WebSiteElectronicMind.API\\WebSiteElectronicMind.MVC\\Controllers\\RenderingController.cs",
+              "RelativeToolTip": "WebSiteElectronicMind.MVC\\Controllers\\RenderingController.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAkwBcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T09:04:54.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PdfGeneratorMoreSevenRepositories.cs",
+              "DocumentMoniker": "C:\\Users\\Farianskiy\\Desktop\\WebASPNet\\Project\\WebSiteElectronicMind.API\\WebSiteElectronicMind.Rendering\\Repositories\\PdfGeneratorMoreSevenRepositories.cs",
+              "RelativeDocumentMoniker": "WebSiteElectronicMind.Rendering\\Repositories\\PdfGeneratorMoreSevenRepositories.cs",
+              "ToolTip": "C:\\Users\\Farianskiy\\Desktop\\WebASPNet\\Project\\WebSiteElectronicMind.API\\WebSiteElectronicMind.Rendering\\Repositories\\PdfGeneratorMoreSevenRepositories.cs",
+              "RelativeToolTip": "WebSiteElectronicMind.Rendering\\Repositories\\PdfGeneratorMoreSevenRepositories.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC8AAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T08:34:42.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PdfGeneratorRepositories.cs",
+              "DocumentMoniker": "C:\\Users\\Farianskiy\\Desktop\\WebASPNet\\Project\\WebSiteElectronicMind.API\\WebSiteElectronicMind.Rendering\\Repositories\\PdfGeneratorRepositories.cs",
+              "RelativeDocumentMoniker": "WebSiteElectronicMind.Rendering\\Repositories\\PdfGeneratorRepositories.cs",
+              "ToolTip": "C:\\Users\\Farianskiy\\Desktop\\WebASPNet\\Project\\WebSiteElectronicMind.API\\WebSiteElectronicMind.Rendering\\Repositories\\PdfGeneratorRepositories.cs",
+              "RelativeToolTip": "WebSiteElectronicMind.Rendering\\Repositories\\PdfGeneratorRepositories.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAowJkAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T07:30:30.9Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1908,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
